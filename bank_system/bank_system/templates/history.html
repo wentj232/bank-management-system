@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Transaction History</h2>
+<table>
+    <tr><th>Date</th><th>Type</th><th>Amount</th><th>Balance After</th></tr>
+    {% for r in rows %}
+    <tr>
+        <td>{{ r[0].strftime('%d-%b-%Y %H:%M') }}</td>
+        <td>{{ r[1] }}</td>
+        <td>{{ r[2] }}</td>
+        <td>{{ r[3] }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="4">No transactions yet.</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

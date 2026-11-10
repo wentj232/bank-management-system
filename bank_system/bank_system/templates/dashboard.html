@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Welcome, {{ acc.name }}</h2>
+
+<div class="card">
+    <p><b>Account No:</b> {{ acc.acc_no }}</p>
+    <p><b>Bank:</b> {{ acc.bname }}, {{ acc.loc }}</p>
+    <p><b>Customer details:</b> {{ acc.customer_details() }}</p>
+    <p class="balance">Balance: Rs. {{ "%.2f"|format(acc.balance) }}</p>
+</div>
+
+<div class="card">
+    <h3>Update Age</h3>
+    <form method="POST" action="/update-age">
+        <input type="number" name="age" value="{{ acc.age }}" min="18" required>
+        <button type="submit">Update</button>
+    </form>
+</div>
+{% endblock %}

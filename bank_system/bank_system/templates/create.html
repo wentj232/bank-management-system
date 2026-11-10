@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Open an Account</h2>
+    <form method="POST">
+        <label>Name</label>
+        <input type="text" name="name" required>
+        <label>Age</label>
+        <input type="number" name="age" min="18" required>
+        <label>Set 4-digit PIN</label>
+        <input type="password" name="pin" maxlength="4" required>
+        <button type="submit">Create Account</button>
+    </form>
+    <p>Already have an account? <a href="/login">Login</a></p>
+</div>
+{% endblock %}

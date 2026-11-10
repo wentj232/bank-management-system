@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <b>SBI Bank</b>
+        {% if session.acc_no %}
+        <span>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/deposit">Deposit</a>
+            <a href="/withdraw">Withdraw</a>
+            <a href="/history">History</a>
+            <a href="/interest">Interest</a>
+            <a href="/bank-info">Bank Info</a>
+            <a href="/logout">Logout</a>
+        </span>
+        {% endif %}
+    </div>
+
+    <div class="container">
+        {% for m in get_flashed_messages() %}
+            <p class="alert">{{ m }}</p>
+        {% endfor %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

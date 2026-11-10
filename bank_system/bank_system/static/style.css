@@ -1,0 +1,31 @@
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f9; }
+
+.navbar {
+    background: #1f3a5f; color: white; padding: 15px 30px;
+    display: flex; justify-content: space-between;
+}
+.navbar a { color: white; margin-left: 15px; text-decoration: none; }
+
+.container { max-width: 900px; margin: 30px auto; padding: 0 15px; }
+
+.card {
+    background: white; padding: 25px; border-radius: 8px;
+    max-width: 420px; margin-bottom: 20px;
+}
+
+label { display: block; margin-top: 12px; font-weight: bold; }
+input {
+    width: 100%; padding: 8px; margin-top: 5px;
+    border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
+}
+button {
+    background: #1f3a5f; color: white; border: none; padding: 9px 18px;
+    margin-top: 14px; border-radius: 4px; cursor: pointer;
+}
+
+.balance { font-size: 20px; font-weight: bold; color: #198754; }
+.alert { background: #fff3cd; padding: 10px; border-radius: 4px; }
+
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { padding: 10px; border-bottom: 1px solid #ddd; text-align: left; }
+th { background: #eef1f5; }

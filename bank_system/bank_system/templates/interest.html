@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Simple Interest Calculator</h2>
+    <form method="POST">
+        <label>Principal (Rs.)</label>
+        <input type="number" name="p" step="0.01" required>
+        <label>Rate (% per year)</label>
+        <input type="number" name="r" step="0.01" required>
+        <label>Time (years)</label>
+        <input type="number" name="t" step="0.01" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if result is not none %}
+        <p class="balance">Interest: Rs. {{ "%.2f"|format(result) }}</p>
+    {% endif %}
+</div>
+{% endblock %}
